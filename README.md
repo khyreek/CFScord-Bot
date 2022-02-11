@@ -1,6 +1,9 @@
 # Codeforces-Discord-Bot
 Discord bot that crops and posts any specified, or unspecified codeforce problem with crisped corners to discord on command. Created to solve codeforce problems with friends on a commonly used social media platform, without the need to coordinate steps before starting discussions or problem-solving.
 
+## Demonstration
+https://user-images.githubusercontent.com/69024184/134733513-fddafb1f-e088-4868-9ce6-6dad3a90cd30.mp4
+
 ## Setup
 This was written while using Chrome, so driver installations are Chrome-based
 1. Run in command prompt: `pip install selenium beautifulsoup4, discord.py, python-opencv, numpy, webdriver-manager`
@@ -20,7 +23,4 @@ Filters through the given requests and finds a random codeforces problem fitting
  
 `$subm [codeforce_problem_code]`
 Sends a link to the codeforce page with submission space scrolled-to and highlighted, ex. `cf subm 1546E`; outputs: `https://codeforces.com/problemset/problem/1546/E#:~:text=%E2%86%92%20Submit%3F,Submit`
-
-## Demonstration
-https://user-images.githubusercontent.com/69024184/134733513-fddafb1f-e088-4868-9ce6-6dad3a90cd30.mp4
 
