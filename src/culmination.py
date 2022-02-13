@@ -94,7 +94,7 @@ def filter_cfs(min_rating: int, max_rating: int, filters: tuple[str, ...]) -> Pr
 			for filter in filters
 		)
 	)
-	print(f"{genre_filter}{min_rating}-{max_rating}")
+	# print(f"{genre_filter}{min_rating}-{max_rating}")
 	return cfs_hashtag(f"{genre_filter}{min_rating}-{max_rating}")
 	
 def submit_cfs(problem: Problem):
