@@ -95,6 +95,6 @@ def cfs_hashtag(link: str):
 	chosen_problem = random.choice(tuple(bot_level))
 	return (
 		re.findall('[1-9].*[A-K]', chosen_problem)[0]
-			.replace('/', '')
+		.replace('/', '')
 	)
 
