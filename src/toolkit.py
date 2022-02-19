@@ -41,15 +41,22 @@ def cfs_problem_info(problem: Problem) -> tuple[ProblemWidth, CFSSectionsData]:
 
 		driver.get(CFS_PROBLEM_LINK_PREFIX + link_addon)
 		driver.set_window_size(site_dimension('Width'), site_dimension('Height'))
-		full_problem = driver.find_element('class name', value='problem-statement')
+		
+		full_problem, header, footer = (
+			driver.find_element(by=html_element, value=element_id)
+			for (html_element, element_id)
+			in (
+				('class name', 'problem-statement'),
+				('class name', 'header'),
+				('id', 'footer')
+			)
+		)
+		
 		full_problem.screenshot(CFS_ENTIRE_PROBLEM_FILENAME)
-
 		problem_width = full_problem.size['width']
 		start_offset = full_problem.location['y'] # top left location of where problem starts
-		header = driver.find_element('class name', value='header')
-		sections = driver.find_elements('class name', value='section-title')
-		footer = driver.find_element('id', value='footer')
 
+		sections = driver.find_elements('class name', value='section-title')
 		return (
 			problem_width, tuple(
 				y_location - start_offset
