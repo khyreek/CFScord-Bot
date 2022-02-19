@@ -55,7 +55,7 @@ def cfs_combiner(
 				):
 				yield full_problem[
 					locations_data[0] : locations_data[-i],
-					0 				  : problem_width
+					0 		  : problem_width
 				]
 				
 				locations_data = locations_data[-i :]
@@ -94,7 +94,7 @@ def filter_cfs(min_rating: int, max_rating: int, filters: tuple[str, ...]) -> Pr
 			for filter in filters
 		)
 	)
-	# print(f"{genre_filter}{min_rating}-{max_rating}")
+	print(f"{genre_filter}{min_rating}-{max_rating}")
 	return cfs_hashtag(f"{genre_filter}{min_rating}-{max_rating}")
 	
 def submit_cfs(problem: Problem):
